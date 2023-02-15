@@ -20,6 +20,7 @@ public class HomePage {
         IoUtils.println("2 登录");
         IoUtils.println("3 钱包");
         IoUtils.println("4 挖矿");
+        IoUtils.println("5 角色");
         int select = IoUtils.inputInt();
         switch (select){
             case 1:
@@ -34,6 +35,8 @@ public class HomePage {
             case 4:
                 new MiningPage().mining(this);
                 break;
+            case 5:
+                new SoldierPage().show(this);
             default:
                 this.start();
                 break;

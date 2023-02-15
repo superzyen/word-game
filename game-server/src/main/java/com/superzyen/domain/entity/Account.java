@@ -6,6 +6,14 @@ import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
+/**
+ * 账号
+ *
+ * @author wenzy
+ * @date 2023/2/13
+ **/
+
+
 @Data
 @Accessors(chain = true)
 @TableName("account")

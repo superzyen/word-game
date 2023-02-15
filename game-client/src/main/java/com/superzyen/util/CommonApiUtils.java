@@ -3,6 +3,7 @@ package com.superzyen.util;
 import com.alibaba.fastjson.JSONObject;
 import com.superzyen.common.ServerSetting;
 import com.superzyen.dto.AccountDto;
+import com.superzyen.dto.SoldierDto;
 import com.superzyen.page.HomePage;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -32,5 +33,16 @@ public class CommonApiUtils {
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
         String res = HttpUtils.post(ServerSetting.getPath() + "/server/award", body);
         return Boolean.valueOf(res);
+    }
+
+    /**
+     *  获取角色基础信息
+     */
+    public static SoldierDto soldierInfo(Integer userId) throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("userId", userId);
+        RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
+        String res = HttpUtils.post(ServerSetting.getPath() + "/soldier/info", body);
+        return JSONObject.parseObject(res, SoldierDto.class);
     }
 }

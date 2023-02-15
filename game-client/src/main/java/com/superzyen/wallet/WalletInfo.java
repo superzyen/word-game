@@ -7,12 +7,16 @@ import com.superzyen.dto.WalletDto;
 import com.superzyen.page.HomePage;
 import com.superzyen.util.HttpUtils;
 import com.superzyen.util.IoUtils;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 
+@Slf4j
+@Data
 public class WalletInfo {
 
     public void show() throws IOException {

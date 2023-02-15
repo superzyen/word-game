@@ -5,12 +5,16 @@ import com.superzyen.dto.AccountDto;
 import com.superzyen.util.CommonApiUtils;
 import com.superzyen.util.HttpUtils;
 import com.superzyen.util.IoUtils;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 
 /**
  * 矿场
  */
+@Slf4j
+@Data
 public class MineField {
 
     public void mining(int loop) throws IOException {

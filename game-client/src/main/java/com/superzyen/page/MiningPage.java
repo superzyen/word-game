@@ -12,6 +12,7 @@ public class MiningPage {
     private MineField mineField = new MineField();
 
     public void mining(HomePage homePage) throws IOException {
+
         if (!HomePage.getGlobalStatus().isLogined()) {
             IoUtils.println("请先登录");
             homePage.start();
