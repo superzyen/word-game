@@ -12,7 +12,7 @@ public class Server {
     public boolean isStarted() throws IOException {
 
        try{
-           String res = HttpUtils.get(ServerSetting.getPath() + "/server/zyen");
+           String res = HttpUtils.get(ServerSetting.getPath() + "/server/zyen/v1");
 
            if(StringUtils.isNotBlank(res)){
                return true;

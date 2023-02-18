@@ -16,12 +16,15 @@ public class Soldier {
     /**
      * 个人信息
      */
-    private void soldierInfo(Integer userId) throws IOException {
+    public void soldierInfo(Integer userId) throws IOException {
         SoldierDto soldierDto = CommonApiUtils.soldierInfo(userId);
         IoUtils.println("=========================================");
         IoUtils.println("基础攻击："+soldierDto.getBasicAtk());
         IoUtils.println("基础防御："+soldierDto.getBasicDef());
-        IoUtils.println("基础攻击："+soldierDto.getHp());
+        IoUtils.println("基础血量："+soldierDto.getHp());
+        IoUtils.println("基础攻速："+soldierDto.getSpeed());
+        IoUtils.println("未来成长倍率："+soldierDto.getFutureRate());
+        IoUtils.println("暴击效果："+soldierDto.getCritEffect());
         IoUtils.println("=========================================");
     }
 }

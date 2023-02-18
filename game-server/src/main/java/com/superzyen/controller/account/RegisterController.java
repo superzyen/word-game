@@ -18,4 +18,9 @@ public class RegisterController {
         return registerService.register(request.getName(), request.getPassword());
     }
 
+    @PostMapping("/canRegister")
+    public Boolean canRegister(@RequestBody RegisterRequest request) {
+        return registerService.canRegister(request.getName());
+    }
+
 }

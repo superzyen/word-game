@@ -1,6 +1,7 @@
 package com.superzyen.page;
 
 import com.superzyen.common.GlobalStatus;
+import com.superzyen.page.soldier.SoldierPage;
 import com.superzyen.util.IoUtils;
 import org.springframework.stereotype.Component;
 
@@ -36,7 +37,8 @@ public class HomePage {
                 new MiningPage().mining(this);
                 break;
             case 5:
-                new SoldierPage().show(this);
+                new SoldierPage().start(this);
+                break;
             default:
                 this.start();
                 break;

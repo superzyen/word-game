@@ -27,6 +27,7 @@ public class Soldier implements Serializable {
     /**
      * 用户id
      */
+    @TableField("user_id")
     private Integer userId;
 
     /**
@@ -54,10 +55,10 @@ public class Soldier implements Serializable {
     private Integer speed;
 
     /**
-     * 暴击率
+     * 暴击效果
      */
-    @TableField("crit_rate")
-    private Double critRate;
+    @TableField("crit_effect")
+    private Double critEffect;
 
     /**
      * 未来成长倍率

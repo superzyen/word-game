@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ServerController {
 
-    @GetMapping("/zyen")
+    @GetMapping("/zyen/v1")
     public String zyen(){
         return "welcome zyen game";
     }

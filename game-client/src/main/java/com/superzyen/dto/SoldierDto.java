@@ -45,9 +45,9 @@ public class SoldierDto implements Serializable {
     private Integer speed;
 
     /**
-     * 暴击率
+     * 暴击效果
      */
-    private Double critRate;
+    private Double critEffect;
 
     /**
      * 未来成长倍率
