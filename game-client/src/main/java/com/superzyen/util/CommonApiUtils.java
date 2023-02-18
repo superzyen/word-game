@@ -5,6 +5,7 @@ import com.superzyen.common.ServerSetting;
 import com.superzyen.dto.AccountDto;
 import com.superzyen.dto.SoldierDto;
 import com.superzyen.page.HomePage;
+import com.superzyen.vo.ExchangeListVO;
 import com.superzyen.vo.SoldierSetupVO;
 import com.superzyen.vo.WarehouseVO;
 import okhttp3.MediaType;
@@ -79,5 +80,15 @@ public class CommonApiUtils {
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
         String res = HttpUtils.post(ServerSetting.getPath() + "/server/weapon/warehouse", body);
         return JSONObject.parseArray(res, WarehouseVO.class);
+    }
+
+    /**
+     * 交易所商品列表
+     */
+    public static List<ExchangeListVO> exchangeList() throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
+        String res = HttpUtils.post(ServerSetting.getPath() + "/server/exchange/list", body);
+        return JSONObject.parseArray(res, ExchangeListVO.class);
     }
 }

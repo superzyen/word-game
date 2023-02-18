@@ -1,4 +1,4 @@
-package com.superzyen.account;
+package com.superzyen.service.account;
 
 import com.superzyen.common.ServerSetting;
 import com.superzyen.util.HttpUtils;

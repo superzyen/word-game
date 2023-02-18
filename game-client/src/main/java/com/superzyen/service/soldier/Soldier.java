@@ -1,4 +1,4 @@
-package com.superzyen.Soldier;
+package com.superzyen.service.soldier;
 
 import com.superzyen.dto.SoldierDto;
 import com.superzyen.util.CommonApiUtils;

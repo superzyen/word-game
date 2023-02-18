@@ -1,4 +1,4 @@
-package com.superzyen.weapon;
+package com.superzyen.service.weapon;
 
 import com.superzyen.dto.AccountDto;
 import com.superzyen.util.CommonApiUtils;
@@ -27,7 +27,6 @@ public class Warehouse {
             IoUtils.println("装备名：" + warehouseVO.getName());
             IoUtils.println("装备效果说明：" + warehouseVO.getIntro());
             IoUtils.println("状态：" + (warehouseVO.getIsSetup() ? "已装备" : "未装备"));
-            IoUtils.println("=========================================");
         }
 
         boolean escape = false;

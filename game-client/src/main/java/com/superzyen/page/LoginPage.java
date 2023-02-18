@@ -1,6 +1,6 @@
 package com.superzyen.page;
 
-import com.superzyen.account.UserLogin;
+import com.superzyen.service.account.UserLogin;
 import com.superzyen.util.IoUtils;
 
 import java.io.IOException;

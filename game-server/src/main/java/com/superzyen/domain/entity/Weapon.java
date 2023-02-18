@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 装备
@@ -68,5 +67,11 @@ public class Weapon implements Serializable {
      */
     @TableField("frozen_day")
     private Integer frozenDay;
+
+    /**
+     * 装备类型（DEFAULT:默认类型）
+     */
+    @TableField("type")
+    private String type;
 
 }

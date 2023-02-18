@@ -1,6 +1,6 @@
 package com.superzyen.page.soldier;
 
-import com.superzyen.Soldier.Soldier;
+import com.superzyen.service.soldier.Soldier;
 import com.superzyen.dto.AccountDto;
 import com.superzyen.util.CommonApiUtils;
 import com.superzyen.util.IoUtils;

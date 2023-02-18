@@ -1,7 +1,7 @@
 package com.superzyen.page;
 
 import com.superzyen.util.IoUtils;
-import com.superzyen.wallet.WalletInfo;
+import com.superzyen.service.wallet.WalletInfo;
 
 import java.io.IOException;
 

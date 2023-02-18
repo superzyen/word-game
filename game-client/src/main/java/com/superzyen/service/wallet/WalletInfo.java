@@ -1,4 +1,4 @@
-package com.superzyen.wallet;
+package com.superzyen.service.wallet;
 
 import com.alibaba.fastjson.JSONObject;
 import com.superzyen.common.ServerSetting;

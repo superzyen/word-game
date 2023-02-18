@@ -2,7 +2,7 @@ package com.superzyen.page.soldier;
 
 import com.superzyen.dto.AccountDto;
 import com.superzyen.util.AuthUtils;
-import com.superzyen.weapon.Weapon;
+import com.superzyen.service.weapon.Weapon;
 
 import java.io.IOException;
 

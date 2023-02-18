@@ -1,4 +1,4 @@
-package com.superzyen.weapon;
+package com.superzyen.service.weapon;
 
 import com.superzyen.dto.AccountDto;
 import com.superzyen.util.CommonApiUtils;

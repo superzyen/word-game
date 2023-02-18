@@ -1,4 +1,4 @@
-package com.superzyen.account;
+package com.superzyen.service.account;
 
 import com.alibaba.fastjson.JSONObject;
 import com.superzyen.common.ServerSetting;
