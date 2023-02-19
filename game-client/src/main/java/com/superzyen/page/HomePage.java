@@ -1,6 +1,7 @@
 package com.superzyen.page;
 
 import com.superzyen.common.GlobalStatus;
+import com.superzyen.page.battle.BattlePage;
 import com.superzyen.page.soldier.SoldierPage;
 import com.superzyen.util.IoUtils;
 import org.springframework.stereotype.Component;
@@ -23,6 +24,7 @@ public class HomePage {
         IoUtils.println("4 挖矿");
         IoUtils.println("5 角色");
         IoUtils.println("6 惠交所");
+        IoUtils.println("7 战斗");
         int select = IoUtils.inputInt();
         switch (select){
             case 1:
@@ -42,6 +44,9 @@ public class HomePage {
                 break;
             case 6:
                 new ExchangePage().start(this);
+                break;
+            case 7:
+                new BattlePage().start(this);
                 break;
             default:
                 this.start();

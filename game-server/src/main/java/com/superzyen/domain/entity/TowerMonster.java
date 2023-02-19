@@ -67,6 +67,11 @@ public class TowerMonster implements Serializable {
     private Integer firstPassUser;
 
     /**
+     * 首击用户名
+     */
+    private String firstPassName;
+
+    /**
      *  塔层
      */
     @TableField("tower_level")

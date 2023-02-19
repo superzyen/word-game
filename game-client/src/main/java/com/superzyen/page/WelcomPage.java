@@ -15,8 +15,13 @@ public class WelcomPage {
         IoUtils.println("这是一款连接现实和虚拟，超越过去未来的一款跨时空游戏。");
         IoUtils.println("虽然这只是一个文字游戏");
         IoUtils.println("但它不仅仅是个文字游戏...");
-        IoUtils.println("输入回车进入全新的世界吧！！！");
         IoUtils.println("========================================================================");
+        IoUtils.println("下版本更新内容：");
+        IoUtils.println("1 排行榜");
+        IoUtils.println("2 新BOSS");
+        IoUtils.println("3 强化系统");
+        IoUtils.println("========================================================================");
+        IoUtils.println("输入回车进入全新的世界吧！！！");
         IoUtils.inputString();
         Server server = new Server();
         boolean isStarted = server.isStarted();
