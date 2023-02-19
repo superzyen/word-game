@@ -32,6 +32,18 @@ public class IoUtils {
     }
 
     /**
+     * 长整型输入
+     */
+    public static long inputLong() {
+        if (scanner == null) {
+            scanner = new Scanner(System.in);
+        }
+        long input = scanner.nextLong();
+        scanner = null;
+        return input;
+    }
+
+    /**
      * 通用输出
      */
     public static void print(String val) {

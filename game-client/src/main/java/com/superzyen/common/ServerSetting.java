@@ -11,6 +11,6 @@ public class ServerSetting {
     private final static String port = "8080";
 
     public static String getPath() {
-        return protocal + localhost;
+        return protocal + ip;
     }
 }

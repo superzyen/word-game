@@ -1,6 +1,7 @@
 package com.superzyen.controller.weapon;
 
 import com.superzyen.domain.request.InstanceExistRequest;
+import com.superzyen.domain.request.SellInstanceRequest;
 import com.superzyen.service.weapon.WeaponInstanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class WeaponInstanceController {
     }
 
     @PostMapping("/sell")
-    public String sell(@RequestBody InstanceExistRequest request) {
-        return weaponInstanceService.sell(request.getInstanceId(), request.getUserId());
+    public String sell(@RequestBody SellInstanceRequest request) {
+        return weaponInstanceService.sell(request.getInstanceId(), request.getUserId(), request.getPrice());
     }
 }

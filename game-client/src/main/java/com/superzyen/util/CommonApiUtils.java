@@ -105,13 +105,14 @@ public class CommonApiUtils {
     /**
      * 出售实例
      */
-    public static Boolean sellInstance(Integer userId, Integer instanceId) throws IOException {
+    public static ResultVO sellInstance(Integer userId, Integer instanceId, long price) throws IOException {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("userId", userId);
         jsonObject.put("instanceId", instanceId);
+        jsonObject.put("price", price);
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
         String res = HttpUtils.post(ServerSetting.getPath() + "/server/weaponinstance/sell", body);
-        return Boolean.valueOf(res);
+        return JSONObject.parseObject(res, ResultVO.class);
     }
 
     /**
@@ -135,5 +136,17 @@ public class CommonApiUtils {
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
         String res = HttpUtils.post(ServerSetting.getPath() + "/server/tower/attack", body);
         return JSONObject.parseObject(res, TowerResultVO.class);
+    }
+
+    /**
+     *  购买装备实例
+     */
+    public static ResultVO buyInstance(Integer exhangeId, Integer userId) throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("exchangeId", exhangeId);
+        jsonObject.put("userId", userId);
+        RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonObject.toJSONString());
+        String res = HttpUtils.post(ServerSetting.getPath() + "/server/exchange/buy", body);
+        return JSONObject.parseObject(res, ResultVO.class);
     }
 }

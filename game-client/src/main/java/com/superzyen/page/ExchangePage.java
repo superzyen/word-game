@@ -12,7 +12,7 @@ public class ExchangePage {
 
     public void start(HomePage homePage) throws IOException {
         AccountDto accountDto = AuthUtils.isLogin(homePage);
-        exchange.operate(exchange.list());
+        exchange.operate(exchange.list(), accountDto.getId());
         homePage.start();
     }
 }

@@ -22,4 +22,7 @@ public class Exchange implements Serializable {
 
     @TableField("create_time")
     private Date createTime;
+
+    @TableField("price")
+    private Long price;
 }

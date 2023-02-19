@@ -166,7 +166,10 @@ public class TowerService {
      */
     @Transactional(rollbackFor = Exception.class)
     public TowerResultVO attackBoss() {
-
-        return null;
+       TowerResultVO towerResultVO =  new TowerResultVO();
+        towerResultVO.setIsSuccess(false);
+        towerResultVO.setMessage("被BOSS击败！！");
+        towerResultVO.setIsAward(false);
+        return towerResultVO;
     }
 }

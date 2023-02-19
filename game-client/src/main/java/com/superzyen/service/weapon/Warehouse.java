@@ -3,6 +3,7 @@ package com.superzyen.service.weapon;
 import com.superzyen.dto.AccountDto;
 import com.superzyen.util.CommonApiUtils;
 import com.superzyen.util.IoUtils;
+import com.superzyen.vo.ResultVO;
 import com.superzyen.vo.WarehouseVO;
 
 import java.io.IOException;
@@ -98,12 +99,17 @@ public class Warehouse {
         IoUtils.println("请输入你要出售的装备唯一码:");
         Integer instanceId = IoUtils.inputInt();
         if (idWarehouseMap.containsKey(instanceId)) {
-            boolean res = CommonApiUtils.sellInstance(userId, instanceId);
-            if (res) {
-                IoUtils.println("上架惠交所成功。");
+
+            IoUtils.println("请输入你要出售的价格:");
+            long price = IoUtils.inputLong();
+
+            ResultVO resultVO = CommonApiUtils.sellInstance(userId, instanceId, price);
+            if (resultVO.getIsSuccess()) {
+                IoUtils.println("出售成功。");
             } else {
-                IoUtils.println("该装备不允许出售！！");
+                IoUtils.println("出售失败。");
             }
+            IoUtils.println(resultVO.getMessage());
 
         } else {
             IoUtils.println("唯一码错误，你未拥有该装备！！");
