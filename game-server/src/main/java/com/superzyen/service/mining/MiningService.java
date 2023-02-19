@@ -25,16 +25,18 @@ public class MiningService {
     public Boolean award(Integer userId) {
         SystemSetting systemSetting = systemSettingMapper.selectOne(new QueryWrapper<SystemSetting>().eq("item_name", CommonSystemItem.MONEY));
         Long dbMoney = Long.valueOf(systemSetting.getItemValue());
-        Long finalMoney = dbMoney - 10L;
+        Long mineQty = 10L;
+        Long finalMoney = dbMoney - mineQty;
         if (finalMoney <= 0) {
             finalMoney = 0L;
+            mineQty = dbMoney;
         }
         systemSetting.setItemValue(String.valueOf(finalMoney));
         systemSettingMapper.updateById(systemSetting);
 
         //更新用户的钱包
         Wallet wallet = walletMapper.selectOne(new QueryWrapper<Wallet>().eq("user_id", userId));
-        wallet.setCurrency(wallet.getCurrency() + 10);
+        wallet.setCurrency(wallet.getCurrency() + mineQty);
         walletMapper.updateById(wallet);
         return true;
     }
